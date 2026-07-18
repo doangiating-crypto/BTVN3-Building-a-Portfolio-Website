@@ -167,8 +167,8 @@ The Express backend exposes RESTful endpoints under the base URL `http://localho
 ---
 
 ### Project Demo Video
----
 [GGdrive](https://tinyurl.com/yvs5esne)
 
+---
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
