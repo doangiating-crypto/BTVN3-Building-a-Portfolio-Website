@@ -168,12 +168,9 @@ The Express backend exposes RESTful endpoints under the base URL `http://localho
 
 ## 📸 Screenshots & Demo
 
-### Postman API Testing
-[Insert Postman Screenshot Here]
 
 ### Project Demo Video
-[Insert Demo Video Link Here]
-
+[GGdrive]https://tinyurl.com/yvs5esne
 ---
 
 ## 📄 License
