@@ -3,8 +3,8 @@ import React from 'react';
 const Hero = () => {
   const developerData = {
     name: 'Đoàn Gia Tiến',
-    title: 'Software Engineering Student',
-    slogan: 'Aspiring Software Engineer Student | Learning by Building Real Projects | Code. Learn. Improve. Repeat.'
+    title: 'Aspiring Software Engineering Student',
+    slogan: 'Learning by Building Real Projects | Code. Learn. Improve. Repeat.'
   };
 
   const { name, title, slogan } = developerData;

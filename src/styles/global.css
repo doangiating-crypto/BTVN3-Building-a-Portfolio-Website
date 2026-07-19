@@ -109,7 +109,7 @@ body {
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   transition: var(--transition-smooth);
   position: relative;
 }
@@ -188,7 +188,7 @@ body {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 0.75rem;
@@ -207,6 +207,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--text-primary);
+  margin-top: 1.25rem;
   margin-bottom: 1.75rem;
   letter-spacing: -0.5px;
   transition: var(--transition-smooth);
@@ -447,25 +448,45 @@ body {
   min-width: 180px;
 }
 
-/* Asymmetrical Bento Grid configuration for Projects */
+/* Horizontal Scroll Configuration for Projects */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  overflow-x: auto;
   gap: 2rem;
+  padding-bottom: 2rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #06b6d4 var(--bg-glass);
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Odd-indexed project cards span 2 columns, creating a Bento style */
-.projects-grid > :nth-child(3n+1) {
-  grid-column: span 2;
+.projects-grid::-webkit-scrollbar {
+  height: 8px;
 }
 
-.projects-grid > :nth-child(3n+2) {
-  grid-column: span 1;
+.projects-grid::-webkit-scrollbar-track {
+  background: var(--bg-glass);
+  border-radius: 4px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+  border-radius: 4px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:active {
+  background: #a855f7;
 }
 
 /* Glassmorphism card for Projects */
 .project-card {
+  flex: 0 0 calc(33.333% - 1.5rem);
+  scroll-snap-align: start;
+  min-width: 320px;
   background: var(--bg-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -476,6 +497,8 @@ body {
   box-shadow: 0 10px 30px var(--card-shadow);
   display: flex;
   flex-direction: column;
+  height: auto;
+  align-self: stretch;
 }
 
 .project-card:hover {
@@ -491,15 +514,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 0;
   border-bottom: 1px solid var(--border-color);
   transition: background-color 0.3s ease;
+  overflow: hidden;
 }
 
 .project-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
